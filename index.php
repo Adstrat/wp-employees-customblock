@@ -28,7 +28,7 @@ class Employees {
   function theHTML($attributes) {
    if (!is_admin()) {
       wp_enqueue_script('employeeFrontend', plugin_dir_url(__FILE__) . 'build/frontend.js', array('wp-element'), null, true);
-      wp_enqueue_style('employeeFrontendStyles', plugin_dir_url(__FILE__) . 'build/frontend.css');
+      wp_enqueue_style('employeeFrontendStyles', plugin_dir_url(__FILE__) . 'build/index.css');
     }
 
     ob_start(); ?>
