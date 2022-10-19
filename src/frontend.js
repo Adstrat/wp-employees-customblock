@@ -29,12 +29,12 @@ function FrontendEmployeesBlock( props ) {
   }
 
   return (
-    <div>
-      <div className="employee-edit-block">
+    <div className="main-employee-container">
+      <div>
         <h2>{props.title}</h2>
         <h4 className="light">{props.description}</h4>
       </div>
-      <div className="main-employee-container">
+      <div className="country-employee-container">
 
         {/* Countries Navbar */}
         <ul className="countries">

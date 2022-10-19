@@ -37,7 +37,7 @@ function BackendPlaceholder( { attributes, setAttributes } ) {
 
   return (
 
-    <>
+    <div className="main-employee-container">
       <div className="employee-edit-block backend">
         <RichText
           tagName="h2"
@@ -54,7 +54,7 @@ function BackendPlaceholder( { attributes, setAttributes } ) {
         />
       </div>
 
-      <div className="main-employee-container backend">
+      <div className="employee-container backend">
 
         {/* Countries Navbar */}
         <ul className="countries">
@@ -99,6 +99,6 @@ function BackendPlaceholder( { attributes, setAttributes } ) {
         </div>
 
       </div>
-    </>
+    </div>
   )
 }
