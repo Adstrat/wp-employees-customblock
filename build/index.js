@@ -173,26 +173,7 @@ function BackendPlaceholder(_ref) {
   }
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "main-employee-container"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "employee-edit-block backend"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-    tagName: "h2",
-    value: attributes.title,
-    onChange: title => setAttributes({
-      title
-    }),
-    placeholder: "Title"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-    tagName: "h4",
-    className: "light",
-    value: attributes.description,
-    onChange: description => setAttributes({
-      description
-    }),
-    placeholder: "Description"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "country-employee-container backend"
+    className: "main-employee-container backend"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "countries"
   }, allEmployees.map((country, index) => {
@@ -221,7 +202,7 @@ function BackendPlaceholder(_ref) {
     });
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "hidden-message"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "This a placeholder image."), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "To update employee info go to 'Employees' on the left sidebar.")))));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "This a placeholder image."), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "To update employee info go to 'Employees' on the left sidebar."))));
 }
 }();
 /******/ })()

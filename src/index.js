@@ -37,65 +37,46 @@ function BackendPlaceholder( { attributes, setAttributes } ) {
 
   return (
 
-    <div className="main-employee-container">
-      <div className="employee-edit-block backend">
-        <RichText
-          tagName="h2"
-          value={attributes.title}
-          onChange={title => setAttributes( { title } )}
-          placeholder={( "Title" )}
-        />
-        <RichText
-          tagName="h4"
-          className="light"
-          value={attributes.description}
-          onChange={description => setAttributes( { description } )}
-          placeholder={( "Description" )}
-        />
-      </div>
+    <div className="main-employee-container backend">
 
-      <div className="country-employee-container backend">
+      {/* Countries Navbar */}
+      <ul className="countries">
+        {allEmployees.map( ( country, index ) => {
+          return (
+            <li
+              key={index}
+              onClick={() => handleCountry( country, index )}
+              className={attributes.country == country.title.rendered && "highlighted"}
+            >{country.title.rendered}</li>
+          )
+        } )}
+      </ul>
 
-        {/* Countries Navbar */}
-        <ul className="countries">
-          {allEmployees.map( ( country, index ) => {
-            return (
-              <li
-                key={index}
-                onClick={() => handleCountry( country, index )}
-                className={attributes.country == country.title.rendered && "highlighted"}
-              >{country.title.rendered}</li>
-            )
-          } )}
-        </ul>
+      <div className="employees-container">
 
-        <div className="employees-container">
-
-          {/* Loops all countries, returns country with conditional && to then map acf data for each employee */}
-          {allEmployees.map( country => {
-            return (
-              attributes.country == country.title.rendered &&
-              country.acf.employee.map( ( person, index ) => {
-                return (
-                  <div className="employee-container">
-                    <img className="circle" src={person.image.sizes.thumbnail} alt="" />
-                    <div>
-                      <h5 key={index}>{person.name}</h5>
-                      <h6 className="light">{person.job_title}</h6>
-                      <h6 className="lighter">{person.city}</h6>
-                    </div>
+        {/* Loops all countries, returns country with conditional && to then map acf data for each employee */}
+        {allEmployees.map( country => {
+          return (
+            attributes.country == country.title.rendered &&
+            country.acf.employee.map( ( person, index ) => {
+              return (
+                <div className="employee-container">
+                  <img className="circle" src={person.image.sizes.thumbnail} alt="" />
+                  <div>
+                    <h5 key={index}>{person.name}</h5>
+                    <h6 className="light">{person.job_title}</h6>
+                    <h6 className="lighter">{person.city}</h6>
                   </div>
-                )
-              } )
-            )
-          } )}
+                </div>
+              )
+            } )
+          )
+        } )}
 
-          {/* Hidden message shown on hover */}
-          <div className="hidden-message">
-            <h4>This a placeholder image.</h4>
-            <h4>To update employee info go to 'Employees' on the left sidebar.</h4>
-          </div>
-
+        {/* Hidden message shown on hover */}
+        <div className="hidden-message">
+          <h4>This a placeholder image.</h4>
+          <h4>To update employee info go to 'Employees' on the left sidebar.</h4>
         </div>
 
       </div>

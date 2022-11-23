@@ -1,9 +1,9 @@
-.employee-edit-block {
-  padding: 10px 0;
-  border-radius: 2px;
+.backend {
+  background-color: rgb(233, 243, 252);
 }
 
 .main-employee-container {
+
   .light {
     color: rgb(151, 151, 151);
   }
@@ -11,13 +11,6 @@
   .lighter {
     color: rgb(196, 196, 196);
   }
-}
-
-.backend {
-  background-color: rgb(233, 243, 252);
-}
-
-.country-employee-container {
 
   h4,
   h5,
@@ -26,7 +19,7 @@
   }
 
   .countries {
-    padding: 30px 0 15px 0;
+    padding: 30px 0 15px 10px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
@@ -68,7 +61,7 @@
   .hidden-message {
     position: absolute;
     visibility: hidden;
-    top: 60%;
+    top: 40%;
     margin: 0 auto;
     padding: 10px;
     border-radius: 20px;

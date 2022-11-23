@@ -1,9 +1,8 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/index.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
-.employee-edit-block {
-  padding: 10px 0;
-  border-radius: 2px;
+.backend {
+  background-color: rgb(233, 243, 252);
 }
 
 .main-employee-container .light {
@@ -12,54 +11,49 @@
 .main-employee-container .lighter {
   color: rgb(196, 196, 196);
 }
-
-.backend {
-  background-color: rgb(233, 243, 252);
-}
-
-.country-employee-container h4,
-.country-employee-container h5,
-.country-employee-container h6 {
+.main-employee-container h4,
+.main-employee-container h5,
+.main-employee-container h6 {
   margin: 8px;
 }
-.country-employee-container .countries {
-  padding: 30px 0 15px 0;
+.main-employee-container .countries {
+  padding: 30px 0 15px 10px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
 }
-.country-employee-container .countries li {
+.main-employee-container .countries li {
   cursor: pointer;
   font-size: small;
   list-style: none;
   margin-right: 15px;
   padding: 5px 0;
 }
-.country-employee-container .countries .highlighted {
+.main-employee-container .countries .highlighted {
   color: green;
   border-bottom: 3px solid green;
 }
-.country-employee-container .employees-container {
+.main-employee-container .employees-container {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 10px;
   justify-content: space-evenly;
 }
-.country-employee-container .employee-container {
+.main-employee-container .employee-container {
   padding: 20px;
   width: 180px;
   display: flex;
   align-items: center;
 }
-.country-employee-container .employee-container .circle {
+.main-employee-container .employee-container .circle {
   height: 80px;
   width: 80px;
   border-radius: 50%;
 }
-.country-employee-container .hidden-message {
+.main-employee-container .hidden-message {
   position: absolute;
   visibility: hidden;
-  top: 60%;
+  top: 40%;
   margin: 0 auto;
   padding: 10px;
   border-radius: 20px;
@@ -67,7 +61,7 @@
           backdrop-filter: blur(4px);
   background-color: rgba(0, 78, 146, 0.5);
 }
-.country-employee-container .hidden-message h4 {
+.main-employee-container .hidden-message h4 {
   color: rgb(255, 255, 255);
 }
 
