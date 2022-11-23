@@ -4,8 +4,38 @@ A Gutenberg Custom Block displaying information for employees in a different cou
 
 ## Prerequisites
 
-The custom block requires Advanced Custom Fields (ACF) and repeater field types.  
-It is set up to work with the following Field Group:
+### Custom Post
+
+The custom block requires a Custom Post named *Employees*
+```
+function employees() {
+  register_post_type('employee', array (
+  'show_in_rest' => true,
+  'supports' => array('title', 'excerpt', 'thumbnail', 'editor'),
+ 'public' => true,
+  'show_in_rest' => true,
+ 'show_ui' => true,
+  'labels' => array(
+    'name' => 'Employees',
+   'add_new_item' => 'Add New Employee',
+    'edit_item' => 'Edit Employee',
+   'all_items' => 'All Employees',
+    'singular_name' => 'Employee',
+     'view_item' => 'View Employee'
+  ),
+ 'taxonomies' => array( 'category', 'post_tag' ),
+  'menu_icon' => 'dashicons-id'
+ ));
+
+}
+
++add_action('init', 'employees');
+
+```
+
+### Advanced Custom Fields (ACF) including repeater field types.  
+
+The custom block is set up to work with the following Field Group:
 
 | Field Group: Employees |                |              |             |
 |------------------------|----------------|--------------|-------------|
