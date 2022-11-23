@@ -50,7 +50,7 @@ function FrontendEmployeesBlock( props ) {
             country.acf.employee.map( ( person, index ) => {
               return (
                 <div className="employee-container">
-                  <img className="circle" src={person.image.sizes.thumbnail} alt="image of {person.name}" />
+                  <img className="circle" src={person.image?.sizes?.thumbnail} alt={person.name} />
                   <div>
                     <h5 key={index}>{person.name}</h5>
                     <h6 className="light">{person.job_title}</h6>

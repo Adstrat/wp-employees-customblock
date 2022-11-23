@@ -186,12 +186,14 @@ function BackendPlaceholder(_ref) {
     className: "employees-container"
   }, allEmployees.map(country => {
     return attributes.country == country.title.rendered && country.acf.employee.map((person, index) => {
+      var _person$image, _person$image$sizes;
+
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         className: "employee-container"
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
         className: "circle",
-        src: person.image.sizes.thumbnail,
-        alt: ""
+        src: (_person$image = person.image) === null || _person$image === void 0 ? void 0 : (_person$image$sizes = _person$image.sizes) === null || _person$image$sizes === void 0 ? void 0 : _person$image$sizes.thumbnail,
+        alt: person.name
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", {
         key: index
       }, person.name), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h6", {

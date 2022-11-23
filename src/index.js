@@ -61,7 +61,7 @@ function BackendPlaceholder( { attributes, setAttributes } ) {
             country.acf.employee.map( ( person, index ) => {
               return (
                 <div className="employee-container">
-                  <img className="circle" src={person.image.sizes.thumbnail} alt="" />
+                  <img className="circle" src={person.image?.sizes?.thumbnail} alt={person.name} />
                   <div>
                     <h5 key={index}>{person.name}</h5>
                     <h6 className="light">{person.job_title}</h6>
