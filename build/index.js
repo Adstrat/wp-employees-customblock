@@ -192,7 +192,7 @@ function BackendPlaceholder(_ref) {
     }),
     placeholder: "Description"
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "employee-container backend"
+    className: "country-employee-container backend"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "countries"
   }, allEmployees.map((country, index) => {

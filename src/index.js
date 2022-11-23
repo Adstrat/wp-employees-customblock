@@ -54,7 +54,7 @@ function BackendPlaceholder( { attributes, setAttributes } ) {
         />
       </div>
 
-      <div className="employee-container backend">
+      <div className="country-employee-container backend">
 
         {/* Countries Navbar */}
         <ul className="countries">
