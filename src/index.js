@@ -1,6 +1,5 @@
 import "./index.scss"
 import { useSelect } from "@wordpress/data";
-import { RichText } from "@wordpress/block-editor";
 
 wp.blocks.registerBlockType( "myplugin/employeesblock", {
   title: "Employees Block",

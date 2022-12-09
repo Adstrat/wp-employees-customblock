@@ -140,15 +140,14 @@ divsToUpdate.forEach(div => {
   div.classList.remove("employee-update-me");
 });
 
-function FrontendEmployeesBlock(props) {
+function FrontendEmployeesBlock() {
   const [countries, setCountries] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
   const [selectedCountry, setSelectedCountry] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("Germany");
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    fetch('http://provegcustomersite.local/wp-json/wp/v2/employee?acf_format=standard').then(response => {
+    fetch(`${apiData.url}/wp-json/wp/v2/employee?acf_format=standard`).then(response => {
       return response.json();
     }).then(countries => {
-      setCountries(countries);
-      console.log(countries);
+      setCountries(countries); // console.log( countries );
     });
   }, []);
 

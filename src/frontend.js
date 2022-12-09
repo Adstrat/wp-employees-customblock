@@ -10,17 +10,17 @@ divsToUpdate.forEach( div => {
   div.classList.remove( "employee-update-me" )
 } )
 
-function FrontendEmployeesBlock( props ) {
+function FrontendEmployeesBlock() {
   const [countries, setCountries] = useState( [] );
   const [selectedCountry, setSelectedCountry] = useState( "Germany" );
 
   useEffect( () => {
-    fetch( 'http://provegcustomersite.local/wp-json/wp/v2/employee?acf_format=standard' )
+    fetch( `${ apiData.url }/wp-json/wp/v2/employee?acf_format=standard` )
       .then( response => {
         return response.json();
       } ).then( countries => {
         setCountries( countries );
-        console.log( countries );
+        // console.log( countries );
       } )
   }, [] );
 

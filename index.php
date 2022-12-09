@@ -29,12 +29,17 @@ class Employees {
    if (!is_admin()) {
       wp_enqueue_script('employeeFrontend', plugin_dir_url(__FILE__) . 'build/frontend.js', array('wp-element'), null, true);
       wp_enqueue_style('employeeFrontendStyles', plugin_dir_url(__FILE__) . 'build/index.css');
+      $url = get_site_url();
+      wp_localize_script('employeeFrontend', 'apiData', array(
+        'url' => $url
+      ));
     }
 
     ob_start(); ?>
     <div class="employee-update-me"><pre style="display:none;"><?php echo wp_json_encode($attributes) ?></pre></div>
     <?php return ob_get_clean();
   }
+
 }
 
 
