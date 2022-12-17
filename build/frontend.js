@@ -139,6 +139,9 @@ divsToUpdate.forEach(div => {
   }), div);
   div.classList.remove("employee-update-me");
 });
+console.log({
+  placeholderPerson
+});
 
 function FrontendEmployeesBlock() {
   const [countries, setCountries] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
@@ -173,8 +176,7 @@ function FrontendEmployeesBlock() {
         className: "employee-container"
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
         className: "circle",
-        src: (_person$image = person.image) === null || _person$image === void 0 ? void 0 : (_person$image$sizes = _person$image.sizes) === null || _person$image$sizes === void 0 ? void 0 : _person$image$sizes.thumbnail,
-        alt: person.name
+        src: (_person$image = person.image) === null || _person$image === void 0 ? void 0 : (_person$image$sizes = _person$image.sizes) === null || _person$image$sizes === void 0 ? void 0 : _person$image$sizes.thumbnail
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", {
         key: index
       }, person.name), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h6", {

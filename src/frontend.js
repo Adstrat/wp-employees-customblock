@@ -9,7 +9,7 @@ divsToUpdate.forEach( div => {
   ReactDOM.render( <FrontendEmployeesBlock title={data.title} description={data.description} />, div )
   div.classList.remove( "employee-update-me" )
 } )
-
+console.log( { placeholderPerson } )
 function FrontendEmployeesBlock() {
   const [countries, setCountries] = useState( [] );
   const [selectedCountry, setSelectedCountry] = useState( "Germany" );
@@ -50,7 +50,7 @@ function FrontendEmployeesBlock() {
             country.acf.employee.map( ( person, index ) => {
               return (
                 <div className="employee-container">
-                  <img className="circle" src={person.image?.sizes?.thumbnail} alt={person.name} />
+                  <img className="circle" src={person.image?.sizes?.thumbnail} />
                   <div>
                     <h5 key={index}>{person.name}</h5>
                     <h6 className="light">{person.job_title}</h6>
