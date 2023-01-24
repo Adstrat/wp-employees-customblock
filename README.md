@@ -1,6 +1,10 @@
 # wp-employees-customblock
 
-A Gutenberg Custom Block displaying information for employees in a different countries.  This was a project for the new [ProVeg]( https://proveg.com/) website.
+A Gutenberg Custom Block displaying information for employees in a different countries.  This was a project for the new [ProVeg]( https://proveg.com/) website. 
+
+The data and images for this block are inputed in a custom post named **Employees**. This data then shows up in Gutenburg when the Employees Block is selected.
+
+![Demo](assets/employee-demo.gif)
 
 ## Prerequisites
 
@@ -47,7 +51,7 @@ The custom block is set up to work with the following Field Group:
 
 ## Installation
 ```
-npm install
+npm install --production
 ```
 ## App Info
 ### Author
